@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/present-it@latest/dist/present-it.js"></script>
+  <title></title>
+
+  <style>
+    :root {
+      --base-background-color: url('img/slide-bg.jpg');
+
+      --base-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      --base-font-size: 4vw;
+      --base-text-color: #cad0dc;
+
+      --base-block-margin: 20px;
+
+      --base-heading-margin: 0 0 --base-block-margin 0;
+      --base-heading-font-family: "Avenir Next";
+      --base-heading-color: #fff;
+      --base-heading-line-height: 1.2;
+      --base-heading-letter-spacing: normal;
+      --base-heading-text-transform: uppercase;
+      --base-heading-text-shadow: none;
+      --base-heading-font-weight: bold;
+
+      --base-heading1-size: 2.5em;
+      --base-heading2-size: 1.6em;
+      --base-heading3-size: 1.3em;
+      --base-heading4-size: 1em;
+
+      --base-code-font: 'Hasklig', monospace;
+
+      --base-link-color: --base-text-color;
+      --base-link-color-hover: #5850ff;
+
+      --base-selection-background-color: #1f252e;
+      --base-selection-color: #5850ff;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--base-heading-color);
+    }
+
+    a {
+      color: var(--base-link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--base-link-color-hover);
+      text-decoration: underline;
+    }
+
+    present-deck {
+      background-repeat: no-repeat no-repeat;
+      background-size: cover;
+    }
+
+    present-deck h1,
+    present-deck h2,
+    present-deck h3,
+    present-deck h4,
+    present-deck h5,
+    present-deck h6 {
+      letter-spacing: 10px;
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <present-deck show-progress="false" show-count="false">
+    <present-slide>
+
+      <h1>Stencil</h1>
+      <h4>Universal Web Components</h4>
+      <small><p><a href="https://twitter.com/@mhartington">Mike Hartington | @mhartington</a></p></small>
+
+
+    </present-slide>
+
+    <present-slide background-color="black">
+      <h3 style="font-family: 'Franklin Gothic'; color: #4bd5ee">A long time ago...</h3>
+    </present-slide>
+
+    <present-slide>
+      <h3>JavaScript takes over!</h3>
+      <div>
+        <p>2006: Google Maps</p>
+        <p>JS can actually do cool things</p>
+        <p>But...Spaghetti code</p>
+      </div>
+    </present-slide>
+
+    <present-slide>
+      <h3>Frameworks and Libraries</h3>
+      <div>
+        <p>Tools were created to help</p>
+        <p>Provide patterns and scaling solution</p>
+        <p>Make writing <strong>BIG</strong> Apps better</p>
+      </div>
+    </present-slide>
+
+    <present-slide>
+      <p>But....</p>
+    </present-slide>
+
+    <present-slide>
+      <h3>Mobile becomes Important</h3>
+      <p>JS Frameworks can be big</p>
+      <p>Features are similar, but different code</p>
+      <p>"Pink Wheel" symdrome</p>
+    </present-slide>
+
+    <present-slide>
+      <blockquote>
+        <em>
+          <p>
+            Angular, React, Vue, and others are all essentially doing the same thing. Just different design ideas and code behind the scenese.
+          </p>
+        </em>
+      </blockquote>
+    </present-slide>
+
+    <present-slide>
+      <h3>What if...</h3>
+    </present-slide>
+
+    <present-slide>
+      <h2>Web Components</h2>
+      <br>
+      <h1>👋</h1>
+    </present-slide>
+
+    <present-slide>
+      <img src="https://d24wuq6o951i2g.cloudfront.net/img/events/id/213/2139930/assets/649.web-components-logo-256x256.png" alt="">
+      <p>"Web Components are great"</p>
+      <p>LDNWC...you know what's up</p>
+    </present-slide>
+
+    <present-slide>
+      <h3>But...</h3>
+      <present-fragment><img width="650" src="https://i.imgflip.com/2ltv17.jpg" alt=""></present-fragment>
+    </present-slide>
+
+    <present-slide>
+      <h3>Dev's Love frameworks</h3>
+      <div>
+        <p>Frameworks provide a lot of good</p>
+        <p>Tools can make scaling easy</p>
+        <p>Standards: meh</p>
+      </div>
+      <small>
+        <a href="https://insights.stackoverflow.com/survey/2018/#technology-frameworks-libraries-and-tools">Stack Overflow 2018 Dev survey</a>
+      </small>
+    </present-slide>
+
+    <present-slide>
+      <h3>What if...</h3>
+      <p>Web Componens <em>in</em> the framework</p>
+    </present-slide>
+
+    <present-slide background-color="white">
+      <img src="img/optimized.svg" width="750" alt="">
+    </present-slide>
+
+    <present-slide>
+      <h3>What is Stencil</h3>
+      <div>
+        <p>A compiler for web components</p>
+        <p>Familiar APIs from across frameworks</p>
+        <p>Reactive Data binding</p>
+        <p>JSX&#47;VDOM for speed</p>
+      </div>
+    </present-slide>
+
+    <present-slide>
+      <h3>Totally NOT a framework</h3>
+    </present-slide>
+
+    <present-slide>
+      <present-code lang="jsx">
+        @Component({
+          tag: 'my-name',
+          styleUrl: 'my-name.scss'
+        })
+        export class MyName {
+          @Prop() name: string;
+
+          render() {
+            return &lt;p&gt;Hello, my name is {this.name}&lt;/p&gt;
+
+          }
+        }
+
+      </present-code>
+    </present-slide>
+
+    <present-slide>
+      <h3>Neat, but real example?</h3>
+    </present-slide>
+
+    <present-slide>
+      <h3>Install another CLI?</h3>
+    </present-slide>
+
+    <present-slide background-color="#1b2b34">
+      <h3>
+        <code>$ npm init stencil</code>
+      </h3>
+    </present-slide>
+
+    <present-slide>
+      <h3>Road to 1.0!</h3>
+      <div>
+        <p>☑️ API is solidified</p>
+        <p>Make the code even smaller</p>
+        <p>Ship Ionic 4</p>
+      </div>
+    </present-slide>
+
+    <present-slide>
+      <h4><a href="https://stenciljs.com"></a>stenciljs.com</h4>
+    </present-slide>
+
+    <present-slide>
+      <h3>Questions?</h3>
+      <br>
+      <h4>
+        <code>
+          &lt;/html&gt;
+        </code>
+      </h4>
+    </present-slide>
+  </present-deck>
+</body>
+
+</html>
